@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+//函数式组件
 const AppleItem = ( {apple , changeWeight , eatApple} ) => (
     <div className="appleItem">
         <div className="apple">
@@ -16,11 +15,5 @@ const AppleItem = ( {apple , changeWeight , eatApple} ) => (
         </div>
     </div>
 )
-
-AppleItem.propTypes = {
- // apple: PropTypes.object.isRequierd,
-  changeWeight: PropTypes.func.isRequired,
-  eatApple: PropTypes.func.isRequired
-}
 
 export default AppleItem;

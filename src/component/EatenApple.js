@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+//函数式组件
 const AteApples = ({ apples }) => (
     <div className="section">
         <div className="head">已吃掉</div>

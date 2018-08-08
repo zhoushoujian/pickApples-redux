@@ -1,16 +1,20 @@
-import React from 'react'
-import AppleItem from './AppleItem'
-import PropTypes from 'prop-types';
+import React,{Component} from 'react';
+import AppleItem from './AppleItem';
 
-const AppleList = ( { apples,pickApple,changeWeight,eatApple } ) => {
-    return (
-        <div>
-       {apples.map((v,i) => <AppleItem key={i} apple={v} changeWeight={() => changeWeight(v)} eatApple={() => eatApple(v)} />)}
-       <div style={ { textAlign:'center' } } className="btn-div">
-            <button style={ style.btn } onClick={() => pickApple(apples)}>摘苹果</button>
-        </div>
-    </div>
-    )
+//匿名类式组件，仅作了解，非常不建议使用
+export default class extends Component {
+    
+    render (){
+        let { apples,pickApple,changeWeight,eatApple } = this.props;
+        return (
+            <div>
+                {apples.map((v,i) => <AppleItem key={i} apple={v} changeWeight={() => changeWeight(v)} eatApple={() => eatApple(v)} />)}
+                <div style={ { textAlign:'center' } } className="btn-div">
+                    <button style={ style.btn } onClick={() => pickApple(apples)}>摘苹果</button>
+                </div>
+            </div>
+        )
+    }
 }
 
 const style = {
@@ -22,12 +26,3 @@ const style = {
     }
 
 }
-
-AppleList.propTypes = {
-    apples: PropTypes.array.isRequired,
-    /* pickApple : PropTypes.func.isRequierd,
-    changeWeight : PropTypes.func.isRequierd,
-    eatApple : PropTypes.func.isRequierd */
-}
-
-export default AppleList

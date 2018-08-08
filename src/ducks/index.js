@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux'
+import {combineReducers} from 'redux';
 //reducer
 const apples = (state = [],action) => {
     switch(action.type) {
@@ -13,13 +13,8 @@ const apples = (state = [],action) => {
              }
          ]
       case 'CHANGE_WEIGHT':
-         /* state.map((v) => {
-           console.log("v",v)
-         }) */
-         //console.log('action.apple',action)
-         return state.map((v,i) => v.id === action.apple.id ? { ...v,weight: parseInt(Math.random()*1000,10) } : v)
+         return state.map((v,i) => v.id === action.apple.id ? { ...v,weight: parseInt(Math.random()*1000,10)} : v)
       case 'EAT_APPLE' :
-         //console.log('action.apple',action)
          return state.map((v,i) => v.id === action.apple.id ? {...v,eaten: true} : v)
       default: 
          return state
@@ -34,21 +29,11 @@ export const appStore = combineReducers({
 let index = 0;
 export const pickApple = (apple) => {
   return {
-    type: 'PICK_APPLE',
+    type: 'PICK_APPLE',   //一般 type 的内容使用 大写字母+下划线 的格式。
     id: index++,
     apple
   }
 }
 
-export const changeWeight = (apple) => {
-  return {
-    type: 'CHANGE_WEIGHT',   //一般 type 的内容使用 大写字母+下划线 的格式。
-    apple
-  }
-}
-export const eatApple = (apple) => {
-  return {
-    type: 'EAT_APPLE',
-    apple
-  }
-}
+export const changeWeight = (apple) => ({type: 'CHANGE_WEIGHT',apple});
+export const eatApple = (apple) => ({type: 'EAT_APPLE',apple});
