@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux';
+
 //reducer
 const apples = (state = [],action) => {
     switch(action.type) {
