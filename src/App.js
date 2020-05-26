@@ -1,8 +1,8 @@
 import React from 'react';
+import CurrentAppleContainer from './component/CurrentAppleContainer';
+import EatenAppleContainer from './component/EatenAppleContainer';
+import AppleListContainer from './component/AppleListContainer';
 import './App.css';
-import CurrentAppleContainer from './container/CurrentAppleContainer';
-import EatenAppleContainer from './container/EatenAppleContainer';
-import AppleListContainer from './container/AppleListContainer';
 
 const App = () => {
     return (
