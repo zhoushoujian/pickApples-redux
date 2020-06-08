@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-const AteApples = ({ apples }) => {
+const EatenApple = ({ apples }) => {
     apples = apples.filter((v) => v.eaten === true);
     return (
         <div className="section">
@@ -27,4 +27,4 @@ const mapStateToProps = (state) => ({apples : state.apples});
 
 const mapDispatchToProps = () => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(AteApples);
+export default connect(mapStateToProps, mapDispatchToProps)(EatenApple);
