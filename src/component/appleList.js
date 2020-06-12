@@ -27,7 +27,7 @@ class AppleList extends React.Component {
                         </div>
                     ))
                 }
-                <div style={ { textAlign:'center' } } className="btn-div">
+                <div style={ { textAlign: 'center' } } className="btn-div">
                     <button style={ style.btn } onClick={() => pickApple(apples)}>摘苹果</button>
                 </div>
             </div>
@@ -51,10 +51,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        pickApple : (apple) => dispatch(pickApple(apple)),
-        changeWeight : (apple) => dispatch(changeWeight(apple)),
-        eatApple : (apple) => dispatch(eatApple(apple))
+        pickApple: (apple) => dispatch(pickApple(apple)),
+        changeWeight: (apple) => dispatch(changeWeight(apple)),
+        eatApple: (apple) => dispatch(eatApple(apple))
     };
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(AppleList);
+export default connect(mapStateToProps, mapDispatchToProps)(AppleList);
