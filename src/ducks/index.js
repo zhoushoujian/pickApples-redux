@@ -7,8 +7,8 @@ const EAT_APPLE = "EAT_APPLE"
 
 const initialState = [
 	{
-		name: parseInt(Math.random()*100000,10),
-		weight: parseInt(Math.random()*1000,10),
+		name: parseInt(Math.random() * 100000, 10),
+		weight: parseInt(Math.random() * 1000, 10),
 		id: 0,
 		eaten: false
 	}
@@ -21,16 +21,16 @@ const apples = (state = initialState, action) => {
             return [
                 ...state,
                 {
-                	name: parseInt(Math.random()*100000,10),
-                	weight: parseInt(Math.random()*1000,10),
-                	id: action.id,
-                	eaten: false
+                    name: parseInt(Math.random() * 100000, 10),
+                    weight: parseInt(Math.random() * 1000, 10),
+                    id: action.id,
+                    eaten: false
                 }
             ]
         case CHANGE_WEIGHT:
-            return state.map((v,i) => v.id === action.apple.id ? { ...v,weight: parseInt(Math.random()*1000,10)} : v)
+            return state.map((v) => v.id === action.apple.id ? { ...v, weight: parseInt(Math.random() * 1000, 10)} : v)
         case EAT_APPLE :
-            return state.map((v,i) => v.id === action.apple.id ? {...v,eaten: true} : v)
+            return state.map((v) => v.id === action.apple.id ? {...v, eaten: true} : v)
         default: 
             return state
     }
@@ -38,7 +38,7 @@ const apples = (state = initialState, action) => {
 
 
 export const appStore = combineReducers({
-	apples : apples
+	apples
 })
 
 let index = 1

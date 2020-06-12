@@ -11,7 +11,7 @@ const EatenApple = ({ apples }) => {
                 <span>
                     {
                         apples.length 
-                        ?   apples.reduce(function(total,value){
+                        ?   apples.reduce(function(total, value){
                                 return total + value.weight
                             }, 0) 
                         : 0
@@ -23,7 +23,7 @@ const EatenApple = ({ apples }) => {
     )
 }
 
-const mapStateToProps = (state) => ({apples : state.apples});
+const mapStateToProps = (state) => ({apples: state.apples});
 
 const mapDispatchToProps = () => ({});
 
