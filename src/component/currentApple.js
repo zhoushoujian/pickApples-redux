@@ -14,7 +14,7 @@ class CurrentApple extends React.Component {
                     <span>
                         {
                             apples.length 
-                            ?   apples.reduce(function(total, currentValue){   {/* array.reduce(function(total, currentValue, currentIndex, arr), initialValue) */}
+                            ? apples.reduce(function(total, currentValue){
                                     return total + currentValue.weight
                                 }, 0) 
                             : 0
