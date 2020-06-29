@@ -7,7 +7,7 @@ import './apple.css';
 const Apple = () => {
     return (
         <div className="appleBasket">
-            <div className="title">苹果篮子</div>
+            <div className="title">苹果篮子(redux)</div>
             <div className="stats">
                 <CurrentApple />
                 <EatenApple />
