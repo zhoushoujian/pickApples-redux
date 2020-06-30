@@ -31,3 +31,5 @@ npm run eslint
 ```react```: https://github.com/zhoushoujian/pickApples-react  
 
 ```vue```: https://github.com/zhoushoujian/pickApples-vue  
+
+```vuex```: https://github.com/zhoushoujian/pickApples-vuex  
