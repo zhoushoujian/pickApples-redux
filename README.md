@@ -35,4 +35,4 @@ npm run eslint
 
 ```vue```: https://github.com/zhoushoujian/pickApples-vue  
 
-```vuex```: https://github.com/zhoushoujian/pickApples-vuex  
+```vuex```: https://github.com/zhoushoujian/pickApples-vuex 
