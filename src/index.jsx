@@ -7,9 +7,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { appStore } from './ducks/index';
 import './index.css';
 
-const store = createStore(appStore);
-window.$getState = store.getState;
-console.log("$getState()['apples']", window.$getState().apples);
+export const store = createStore(appStore);
+console.log("store.getState().apples)", store.getState().apples);
 ReactDOM.render(
     <Provider store={store}>   
         <Apple />   
