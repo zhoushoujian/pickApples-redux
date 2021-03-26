@@ -30,7 +30,7 @@ const height = 600; //容器的高度
 const columnWidth = 240;   //每一个砖块的宽度
 const cellCount = 1000;   //砖石块的总数
 
-const Test = () => {
+const VirtualizedMasonryComponent = () => {
   return <VirtualizedMasonry
     height={height}
     columnWidth={columnWidth}
@@ -61,4 +61,4 @@ const Test = () => {
     }} />;
 };
 
-export default Test;
+export default VirtualizedMasonryComponent;
