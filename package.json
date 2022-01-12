@@ -12,8 +12,8 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "eject": "react-scripts eject",
     "eslint": "eslint src/*.jsx"
   },
@@ -36,11 +36,15 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "customize-cra": "^1.0.0",
     "eslint": "^6.6.0",
     "eslint-config-ts-base": "0.0.3",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-react-hooks": "^4.0.4",
-    "husky": "^1.1.2"
+    "husky": "^1.1.2",
+    "less": "^4.1.2",
+    "less-loader": "5.0.0",
+    "react-app-rewired": "^2.1.11"
   },
   "repository": "https://github.com/zhoushoujian/pickApples-redux"
 }

@@ -1,6 +1,8 @@
-:root{
+:root {
   --primary-color: #000;
 }
+
+@color: var(--primary-color);
 
 .loading {
   width: 100%;
@@ -16,7 +18,7 @@
   animation: flickerAnimation 2s infinite;
   cursor: pointer;
   user-select: none;
-  color: var(--primary-color);
+  color: @color;
   transition: all 1.6s;
   text-transform: capitalize;
 }
